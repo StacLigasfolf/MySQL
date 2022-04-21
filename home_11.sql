@@ -1,9 +1,5 @@
 USE shop;
 
--- Задание 1
--- Создайте таблицу logs типа Archive. Пусть при каждом создании записи в таблицах users, catalogs
--- и products в таблицу logs помещается время и дата создания записи, название таблицы, идентификатор
--- первичного ключа и содержимое поля name.
 DROP TABLE IF EXISTS logs;
 
 CREATE TABLE logs (
@@ -39,7 +35,7 @@ DROP TRIGGER IF EXISTS log_appending_from_users;
 delimiter //
 SELECT * FROM products;
 INSERT INTO products (name, description, price, catalog_id) VALUES ('AMD Sempron 2650 OEM',
-  'Процессор на сокете АМ1 и архитектурой Jaguar', 999, 1);
+  'ГЏГ°Г®Г¶ГҐГ±Г±Г®Г° Г­Г  Г±Г®ГЄГҐГІГҐ ГЂГЊ1 ГЁ Г Г°ГµГЁГІГҐГЄГІГіГ°Г®Г© Jaguar', 999, 1);
 DESC products ;
 CREATE TRIGGER log_appending_from_users
 AFTER INSERT ON users
